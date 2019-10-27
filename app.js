@@ -4,6 +4,8 @@ const path = require('path')
 const rootDir = require('./helpers/path')
 const gameRoutes = require('./routes/game')
 const landingPage = require('./routes/landing')
+const routing = require('./routes/add-game')
+
 
 
 const app = express()
@@ -13,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(landingPage)
 app.use(gameRoutes)
+app.use(routing)
 
 app.use('/', (req, res) => {
     res.sendFile(path.join(rootDir, "views", "404.html"))
