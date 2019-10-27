@@ -8,6 +8,9 @@ const landingPage = require('./routes/landing')
 
 const app = express()
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 app.use(landingPage)
 app.use(gameRoutes)
 
