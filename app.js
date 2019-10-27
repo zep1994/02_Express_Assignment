@@ -3,9 +3,12 @@ const path = require('path')
 
 const rootDir = require('./helpers/path')
 const gameRoutes = require('./routes/game')
+const landingPage = require('./routes/landing')
+
 
 const app = express()
 
+app.use(landingPage)
 app.use(gameRoutes)
 
 app.use('/', (req, res) => {
