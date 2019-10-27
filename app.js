@@ -1,13 +1,15 @@
-const http = require('http')
 const express = require('express')
+const path = require('path')
+
+const rootDir = require('./helpers/path')
+const gameRoutes = require('./routes/game')
 
 const app = express()
 
-const hostname = '127.0.0.1'
-const port = 3000
+app.use(gameRoutes)
 
-app.get('/', (req, res) => {
-    res.send('<h1>Hello</h1>')
+app.use('/', (req, res) => {
+    res.sendFile(path.join(rootDir, "views", "404.html"))
 })
 
 app.listen(3000)
