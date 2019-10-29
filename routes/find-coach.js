@@ -6,12 +6,12 @@ const rootDir = require('../helpers/path')
 
 const router = express.Router()
 
-router.get('/add-game', (req, res) => {
-    res.sendFile(path.join(rootDir, "views", 'add-game.html'))
+router.get('/find-coach', (req, res) => {
+    res.sendFile(path.join(rootDir, "views", 'find-coach.html'))
 })
 
 //GET 
-router.post('/add-game', (req, res) => {
+router.post('/find-coach', (req, res) => {
     console.log(req.body)
     res.redirect('/')
 })

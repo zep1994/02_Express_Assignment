@@ -4,9 +4,9 @@ const bodyParser = require('body-parser')
 
 
 const rootDir = require('./helpers/path')
-const gameRoutes = require('./routes/game')
 const landingPage = require('./routes/landing')
-const addGame = require('./routes/add-game')
+const gameRoutes = require('./routes/game')
+const findCoach = require('./routes/find-coach')
 const about = require('./routes/about')
 
 
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.use(landingPage)
 app.use(gameRoutes)
-app.use(addGame)
+app.use(findCoach)
 app.use(about)
 
 app.use('/', (req, res) => {

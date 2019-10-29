@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+            <nav class="main-header__nav">
+                <div class="topnav">
+                    <a class="active" href="/">Home</a>
+                    <a href="/find-coach">Find Coach</a> 
+                    <a href="/game">Contact</a>
+                    <a href="/about">About</a>
+                </div> 
+            </nav> 
+        </header>
+    <form action='/add-game' method="POST">
+        <label for='game'>Game</label>
+        <input type='text' name='title' id='title' />
+        <label for='game'>Experience</label>
+        <input type='text' name='title' id='title' />
+        <label for='game'>level</label>
+        <input type='text' name='title' id='title' />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
